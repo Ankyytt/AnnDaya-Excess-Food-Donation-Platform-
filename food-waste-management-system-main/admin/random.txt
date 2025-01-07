@@ -1,0 +1,2 @@
+http://localhost/food-waste-management-system-main/signup.php
+http://localhost/phpmyadmin/index.php?route=/database/structure&db=demo

@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+body {
+    background-color: #06C167;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+    text-align: center;
+    font-size: 22px;
+    color: black;
+}
+
+.regform {
+    width: 900px; /* Increased width */
+    background-color: white;
+    padding: 20px; /* Reduced padding */
+    margin: 10px auto; /* Reduced margin */
+    color: black;
+    font-size: 18px; /* Slightly smaller font size */
+    border-radius: 10px;
+}
+
+.regformf {
+    width: 800px; /* Increased width */
+    background-color: white;
+    margin: 10px auto; /* Reduced margin */
+    color: black;
+    padding: 15px; /* Reduced padding */
+    font-size: 18px; /* Slightly smaller font size */
+    border-radius: 10px;
+}
+
+#heading {
+    margin-top: 0;
+    color: black;
+    text-align: center;
+    font-size: 28px;
+}
+
+.input input {
+    width: 100%;
+    font-size: 18px; /* Reduced font size */
+    border: 0.5px solid #63707E;
+    border-radius: 6px;
+    padding: 10px 12px; /* Reduced padding */
+    box-sizing: border-box;
+    margin: 5px 0px 10px; /* Reduced margin */
+    color: black;
+}
+
+input:focus {
+    background-color: white;
+}
+
+button {
+    background-color: black;
+    font-size: 18px; /* Reduced font size */
+    color: white;
+    margin-top: 10px; /* Reduced margin */
+    padding: 12px 16px; /* Reduced padding */
+    border-radius: 8px;
+    border: 0.5px solid black;
+    width: 100%;
+}
+
+button:hover {
+    color: #eeeeee;
+    transform: scale(0.98);
+}
+
+.radio input {
+    transform: scale(1.5);
+}
+
+.password {
+    position: relative;
+}
+
+.password input {
+    width: 100%;
+    font-size: 18px; /* Reduced font size */
+    border: 0.5px solid #63707E;
+    border-radius: 6px;
+    padding: 10px 12px; /* Reduced padding */
+    box-sizing: border-box;
+    margin: 5px 0px 10px; /* Reduced margin */
+    color: black;
+}
+
+.fa-eye-slash, .bi, .uil {
+    position: absolute;
+    top: 28%;
+    right: 4%;
+    cursor: pointer;
+}
+
+.image-radio-group input[type="radio"] {
+    display: none;
+}
+
+.image-radio-group label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.image-radio-group label img {
+    border: 2px solid transparent;
+}
+
+.image-radio-group input[type="radio"]:checked + label img {
+    border-color: rgb(46, 44, 44);
+    border-radius: 10px;
+}
+
+.image-radio-group img {
+    width: 250px; /* Increased image width */
+    align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .regform, .regformf {
+        width: 300px;
+        padding: 15px; /* Reduced padding */
+        font-size: 15px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    #heading {
+        font-size: 22px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    .input input {
+        font-size: 16px;
+    }
+
+    .radio input {
+        transform: scale(1.1);
+    }
+
+    .image-radio-group img {
+        width: 300px;
+    }
+}
+
+.error {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #d93025;
+}
+
+h1 {
+    font-size: 29px;
+}
