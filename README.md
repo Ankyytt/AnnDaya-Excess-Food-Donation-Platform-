@@ -1,7 +1,7 @@
 # Annadaya: Food Waste Management System
-<!-- <img src="img/coverimage.jpeg"> -->
 
-<p>**Annadaya**, meaning "Gift of Food," is a platform designed to collect excess/leftover food from donors such as hotels, restaurants, and marriage halls, and redistribute it to those in need. This system directly addresses the challenges of hunger and food wastage while promoting sustainability.</p>
+
+<p>Annadaya, meaning "Gift of Food," is a platform designed to collect excess/leftover food from donors such as hotels, restaurants, and marriage halls, and redistribute it to those in need. This system directly addresses the challenges of hunger and food wastage while promoting sustainability.</p>
 
 ## Tools and Technologies
 <ul>
@@ -57,14 +57,7 @@ The Delivery Person module facilitates the pickup and drop-off of food donations
   <li>Secure Login: Implements robust authentication for all users.</li>
 </ul>
 
-### Mobile-Friendly Website
-<img src="img/responsive.gif">
 
-### Chatbot Support
-<img src="img/chatbotsupport.jpg">
-
-### Secure Login
-<img src="img/hash-flow.png">
 
 ## How to Run
 <ol>
@@ -83,17 +76,4 @@ The Delivery Person module facilitates the pickup and drop-off of food donations
   <li>Run the script: `http://localhost/folderName`.</li>
 </ol>
 
-## Screenshots
 
-### User Module
-<!-- <img src="img/User-module.jpg"> -->
-<img src="img/mobile.jpg">
-
-### Admin Module
-<img src="img/Admin.jpg">
-
-### Delivery Module
-<img src="img/Delivery_module.jpg">
-
-## View Project
-<a href="https://kishor-23.github.io/food-donate/index.html">View Demo</a>
