@@ -1,7 +1,14 @@
 # Annadaya: Food Waste Management System
 <!-- <img src="img/coverimage.jpeg"> -->
 
-<p>**Annadaya**, meaning "Gift of Food," is a platform designed to collect excess/leftover food from donors such as hotels, restaurants, and marriage halls, and redistribute it to those in need. This system directly addresses the challenges of hunger and food wastage while promoting sustainability.</p>
+<p>**Annadaya**, meaning "Gift of Food," is a platform designed to collect excess/leftover food from donors such as hotels, restaurants, and marriage halls, and redistribute it to those in need. This system directly addresses the challenges of hunger and food wastage while promoting sustainability.
+Developed By Team from The Northcap University
+Team Name: RAS-berry
+Members:
+Shreya (22CSU515)
+Rishi (22CSU146)
+Ankit (22CSU216)
+</p>
 
 ## Tools and Technologies
 <ul>
