@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="home.css"> 
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+        /* Body and Background */
+        body {
+            background: url('fwmimage3.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Overlay with gradient */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.7), rgba(6, 193, 103, 0.7));
+            z-index: 1;
+        }
+
+        /* Ensure content is above the overlay */
+        .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 40px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .logo b {
+            color: #06C167;
+        }
+
+        .para {
+            font-size: 22px;
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        /* Button styling */
+        .log a {
+            display: inline-block;
+            font-size: 18px;
+            background: #06C167;
+            padding: 12px 40px;
+            text-decoration: none;
+            font-weight: 500;
+            color: #fff;
+            border-radius: 30px;
+            margin: 15px auto;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(6, 193, 103, 0.4);
+        }
+
+        /* Hover effect */
+        .log a:hover {
+            background: #04a456;
+            letter-spacing: 3px;
+            box-shadow: 0 7px 20px rgba(4, 164, 86, 0.5);
+        }
+
+        .log a i {
+            margin-right: 8px;
+        }
+
+        /* Mobile responsiveness */
+        @media only screen and (max-width: 768px) {
+            .logo {
+                font-size: 32px;
+            }
+
+            .para {
+                font-size: 18px;
+            }
+
+            .log a {
+                font-size: 16px;
+                padding: 10px 30px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+        }
+
+        /* Floating Links */
+        .floating-links {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 2;
+        }
+
+        .floating-links a {
+            display: block;
+            background-color: #06C167;
+            color: white;
+            padding: 12px 20px;
+            margin: 5px 0;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .floating-links a:hover {
+            background-color: #04a456;
+            transform: scale(1.05);
+        }
+
+        .floating-links a i {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="logo"> Welcome to Anna<b>daya</b></p>
+        <p class="para">Login as</p>
+        <div class="log">
+            <a href="signup.php"><i class="fa-solid fa-user"></i> User</a>
+            <a href="admin/signup.php"><i class="fa-solid fa-user-tie"></i> Admin</a>
+            <a href="delivery/deliverysignup.php" id="delivery"><i class="fa-solid fa-motorcycle"></i> Delivery</a>
+        </div>
+    </div>
+
+    <!-- Floating Links for Partnerships and Subscriptions -->
+    <div class="floating-links">
+        <a href="partner.html"><i class="fa-solid fa-handshake"></i> Partnerships</a>
+        <!-- Updated the link for subscriptions -->
+        <a href="subs.html"><i class="fa-solid fa-cogs"></i> Subscriptions</a>
+    </div>
+
+</body>
+</html>

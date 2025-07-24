@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Expiry and Return Tracker</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #06C167;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .form-container:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container label {
+            font-size: 16px;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .form-container input,
+        .form-container select,
+        .form-container button {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+            transition: all 0.3s ease;
+        }
+
+        .form-container input:focus,
+        .form-container select:focus {
+            outline: none;
+            border-color: #06C167;
+            background-color: #fff;
+        }
+
+        .form-container button {
+            background-color: #06C167;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #04a456;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            display: none;
+            font-size: 16px;
+        }
+
+        .expired {
+            color: #FF6347;
+            font-weight: bold;
+        }
+
+        .valid {
+            color: #32CD32;
+            font-weight: bold;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Product Expiry Tracker</h1>
+
+        <form id="product-form">
+            <label for="product-name">Product Name</label>
+            <input type="text" id="product-name" name="product-name" placeholder="Enter product name" required>
+
+            <label for="purchase-date">Date of Purchase</label>
+            <input type="date" id="purchase-date" name="purchase-date" required>
+
+            <label for="expiry-period">Expiry Period (in months)</label>
+            <input type="number" id="expiry-period" name="expiry-period" min="1" placeholder="Enter months" required>
+
+            <label for="returned-products">Returned Products</label>
+            <select id="returned-products" name="returned-products" required>
+                <option value="">Select Yes or No</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="current-date">Current Date</label>
+            <input type="date" id="current-date" name="current-date" required>
+
+            <button type="button" onclick="checkProductExpiry()">Check Expiry Status</button>
+        </form>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        function checkProductExpiry() {
+            const productName = document.getElementById('product-name').value;
+            const purchaseDate = new Date(document.getElementById('purchase-date').value);
+            const expiryPeriod = parseInt(document.getElementById('expiry-period').value);
+            const returned = document.getElementById('returned-products').value;
+            const currentDate = new Date(document.getElementById('current-date').value);
+
+            // Validate inputs
+            if (!productName || !purchaseDate || !expiryPeriod || !returned || !currentDate) {
+                alert("Please fill in all fields!");
+                return;
+            }
+
+            // Calculate expiry date based on purchase date + expiry period
+            const expiryDate = new Date(purchaseDate);
+            expiryDate.setMonth(expiryDate.getMonth() + expiryPeriod);
+
+            // Prepare the result message
+            let resultText = `<strong>Product:</strong> ${productName}<br>`;
+            resultText += `<strong>Purchased on:</strong> ${purchaseDate.toDateString()}<br>`;
+            resultText += `<strong>Expiry Date:</strong> ${expiryDate.toDateString()}<br>`;
+            resultText += `<strong>Returned:</strong> ${returned === "yes" ? "Yes" : "No"}<br>`;
+
+            // Check if the product is expired
+            if (currentDate > expiryDate) {
+                resultText += `<span class="expired">Status: Expired</span><br>`;
+            } else {
+                resultText += `<span class="valid">Status: Valid</span><br>`;
+            }
+
+            // Display the result
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = resultText;
+            resultDiv.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

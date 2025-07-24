@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Plans</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+        body {
+            background: #f4f7fc;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        .plans {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 40px;
+        }
+
+        .plan {
+            background: #06C167;
+            padding: 20px;
+            border-radius: 10px;
+            width: 25%;
+            color: #fff;
+            box-shadow: 0 5px 15px rgba(6, 193, 103, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .plan:hover {
+            transform: scale(1.05);
+        }
+
+        .plan h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .plan p {
+            font-size: 20px;
+            margin: 15px 0;
+        }
+
+        .plan button {
+            background: #fff;
+            color: #06C167;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .plan button:hover {
+            background: #eee;
+        }
+
+        /* Payment Methods Section */
+        .payment-methods {
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .payment-methods h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .payment-methods .method {
+            background: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .payment-methods .method:hover {
+            background: #e9ecef;
+        }
+
+        .payment-methods i {
+            font-size: 28px;
+            margin-right: 15px;
+            color: #06C167;
+        }
+
+        .payment-methods label {
+            font-size: 18px;
+            margin-left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Choose Your Subscription Plan</h1>
+
+        <div class="plans">
+            <div class="plan">
+                <h3>Basic Plan</h3>
+                <p>₹49 / month</p>
+                <button>Select Plan</button>
+            </div>
+
+            <div class="plan">
+                <h3>Standard Plan</h3>
+                <p>₹99 / month</p>
+                <button>Select Plan</button>
+            </div>
+
+            <div class="plan">
+                <h3>Premium Plan</h3>
+                <p>₹129 / month</p>
+                <button>Select Plan</button>
+            </div>
+        </div>
+
+        <div class="payment-methods">
+            <h2>Select a Payment Method</h2>
+
+            <div class="method">
+                <i class="fa-solid fa-credit-card"></i>
+                <label for="credit-card">Credit/Debit Card</label>
+            </div>
+
+            <div class="method">
+                <i class="fa-solid fa-wallet"></i>
+                <label for="wallet">Digital Wallet</label>
+            </div>
+
+            <div class="method">
+                <i class="fa-solid fa-university"></i>
+                <label for="netbanking">Net Banking</label>
+            </div>
+
+            <div class="method">
+                <i class="fa-brands fa-paypal"></i>
+                <label for="paypal">PayPal</label>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

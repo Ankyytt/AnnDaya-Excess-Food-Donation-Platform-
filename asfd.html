@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Shelter Food Donation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #06C167;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #06C167;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"], input[type="email"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #06C167;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #04a456;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer-content {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Animal Shelter Food Donation</h1>
+    </header>
+
+    <div class="container">
+        <h2>Help Feed Animals in Need</h2>
+        <p>By donating food for animals in shelters, you're making a difference in their lives. We appreciate your generous contribution to Jai Cow Mata and other shelters in need.</p>
+
+        <form action="submit_donation.php" method="POST">
+            <label for="donor-name">Full Name</label>
+            <input type="text" id="donor-name" name="donor_name" placeholder="Enter your full name" required>
+
+            <label for="donor-email">Email Address</label>
+            <input type="email" id="donor-email" name="donor_email" placeholder="Enter your email address" required>
+
+            <label for="donation-amount">Amount of Food (in kilograms)</label>
+            <input type="number" id="donation-amount" name="donation_amount" placeholder="Enter the amount of food" required>
+
+            <button type="submit">Donate Now</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Annadaya - Jai Cow Mata Animal Shelter Food Donation. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

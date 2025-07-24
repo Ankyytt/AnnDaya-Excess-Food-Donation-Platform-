@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partnership Form</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+        body {
+            background: #f4f7fc;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-container textarea {
+            resize: vertical;
+        }
+
+        .form-container button {
+            background: #06C167;
+            color: #fff;
+            padding: 12px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background: #04a456;
+        }
+
+        .form-container label {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .form-container .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-container .icon {
+            margin-right: 10px;
+        }
+
+        .confirmation-message {
+            display: none;
+            text-align: center;
+            color: #06C167;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Become Our Partner</h2>
+        <form id="partnerForm">
+            <div class="form-group">
+                <label for="company_name"><i class="fa-solid fa-building icon"></i> Company Name</label>
+                <input type="text" id="company_name" name="company_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address"><i class="fa-solid fa-location-dot icon"></i> Address</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="email"><i class="fa-solid fa-envelope icon"></i> Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone"><i class="fa-solid fa-phone icon"></i> Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Confirmation message -->
+        <div class="confirmation-message" id="confirmationMessage">
+            We will contact you shortly!
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('partnerForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Show confirmation message
+            document.getElementById('confirmationMessage').style.display = 'block';
+
+            // Optionally clear the form fields after submission
+            document.getElementById('partnerForm').reset();
+        });
+    </script>
+
+</body>
+</html>

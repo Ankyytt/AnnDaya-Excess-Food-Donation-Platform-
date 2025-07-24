@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard - Food Donate</title>
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        /* Additional styling for leaderboard */
+        .leaderboard-container {
+            width: 80%;
+            margin: 40px auto;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .leaderboard-container h1 {
+            color: #06C167;
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #06C167;
+            color: white;
+        }
+        td {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Anna<b style="color: #06C167;">daya</b></div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="profile.php">Profile</a></li>
+                <li><a href="terms.html">Terms & Conditions</a></li>
+                <li><a href="dashboard.html">User Dashboard</a></li>
+                <li><a href="leaderboard.html" class="active">Leaderboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function () {
+            const navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        };
+    </script>
+
+    <div class="leaderboard-container">
+        <h1>Top Contributors Leaderboard</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>User</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Shreya</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Rishi</td>
+                    <td>450</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ankit</td>
+                    <td>400</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-left col-md-4 col-sm-6">
+            <p class="about">
+                <span> About us</span>The basic concept of this project Food Waste Management is to collect the excess/leftover food from donors such as hotels, restaurants, marriage halls, etc and distribute to the needy people.
+            </p>
+        </div>
+        <div class="footer-center col-md-4 col-sm-6">
+            <div>
+                <p><span> Contact</span></p>
+            </div>
+            <div>
+                <p> (+00) 0000 000 000</p>
+            </div>
+            <div>
+                <p><a href="#"> Annadaya@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right col-md-4 col-sm-6">
+            <h2> Anna<span>daya</span></h2>
+            <p class="menu">
+                <a href="home.html"> Home</a> |
+                <a href="about.html"> About</a> |
+                <a href="profile.php"> Profile</a> |
+                <a href="contact.html"> Contact</a> |
+                <a href="terms.html"> Terms & Conditions</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
